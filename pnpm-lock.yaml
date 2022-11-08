@@ -1,0 +1,13 @@
+lockfileVersion: 5.4
+
+specifiers:
+  mitata: ^0.1.6
+
+dependencies:
+  mitata: 0.1.6
+
+packages:
+
+  /mitata/0.1.6:
+    resolution: {integrity: sha512-VKQ0r3jriTOU9E2Z+mwbZrUmbg4Li4QyFfi7kfHKl6reZhGzL0AYlu3wE0VPXzIwA5xnFzmEQoBwCcNT8stUkA==}
+    dev: false
