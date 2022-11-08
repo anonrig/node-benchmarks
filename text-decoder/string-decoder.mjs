@@ -2,6 +2,8 @@ import { bench, run } from "mitata"
 import { StringDecoder } from "string_decoder"
  
 const { bigUint8, smallUint8 } = fixture()
+const decoder = new TextDecoder()
+const stringDecoder = new StringDecoder()
 
 function fixture() {
   const smallUint8 = new Uint8Array([226, 132, 149, 32, 226, 138, 134, 32, 226, 132, 149, 226, 130, 128, 32, 226, 138, 130, 32, 226, 132, 164, 32, 226, 138, 130, 32, 226, 132, 154, 32, 226, 138, 130, 32, 226, 132, 157, 32, 226, 138, 130, 32, 226, 132, 130, 44, 32, 226, 138, 165, 32, 60, 32, 97, 32, 226, 137, 160, 32, 98, 32, 226, 137, 161, 32, 99, 32, 226, 137, 164, 32, 100, 32, 226, 137, 170, 32, 226, 138, 164, 32, 226, 135, 146, 32, 40, 65, 32, 226, 135, 148, 32, 66, 41, 44])
@@ -9,21 +11,13 @@ function fixture() {
   return { smallUint8, bigUint8 }
 }
 
-bench('smallUint8', () => {
-  const decoder = new TextDecoder()
-  decoder.decode(smallUint8)
-})
-bench('bigUint8', () => {
-  const decoder = new TextDecoder()
-  decoder.decode(bigUint8)
-})
+bench('smallUint8', () => decoder.decode(smallUint8))
+bench('bigUint8', () => decoder.decode(bigUint8))
 bench('string_decoder smallUint8', () => {
-  const stringDecoder = new StringDecoder()
   stringDecoder.write(smallUint8)
   stringDecoder.end()
 })
 bench('string_decoder bigUint8', () => {
-  const stringDecoder = new StringDecoder()
   stringDecoder.write(bigUint8)
   stringDecoder.end()
 })
