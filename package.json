@@ -4,7 +4,8 @@
   "description": "",
   "main": "text-decoder.js",
   "scripts": {
-    "text-decoder": "~/Developer/node/out/Release/node ./text-decoder/index.mjs && bun run ./text-decoder/index.mjs && deno run -A ./text-decoder/deno.js"
+    "text-decoder": "~/Developer/node/out/Release/node ./text-decoder/index.mjs && bun run ./text-decoder/index.mjs && deno run -A ./text-decoder/deno.js",
+    "string-decoder": "~/Developer/node/out/Release/node ./text-decoder/string-decoder.mjs && bun run ./text-decoder/string-decoder.mjs && deno run -A ./text-decoder/deno-string-decoder.js"
   },
   "keywords": [],
   "author": "",
