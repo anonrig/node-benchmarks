@@ -1,5 +1,5 @@
 import { bench, run } from "https://esm.sh/mitata"
-import { StringDecoder } from "https://deno.land/std@0.140.0/node/string_decoder.ts"
+import { StringDecoder } from "https://deno.land/std@0.162.0/node/string_decoder.ts"
 
 const { bigUint8, smallUint8 } = fixture()
 const stringDecoder = new StringDecoder()
