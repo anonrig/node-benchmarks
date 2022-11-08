@@ -1,8 +1,7 @@
-import { bench, run } from "https://esm.sh/mitata"
-import { StringDecoder } from "https://deno.land/std@0.140.0/node/string_decoder.ts"
- 
+import { bench, run } from "mitata"
+import { StringDecoder } from "string_decoder"
+
 const { bigUint8, smallUint8 } = fixture()
-const decoder = new TextDecoder()
 const stringDecoder = new StringDecoder()
 
 function fixture() {
@@ -11,13 +10,11 @@ function fixture() {
   return { smallUint8, bigUint8 }
 }
 
-bench('smallUint8', () => decoder.decode(smallUint8))
-bench('bigUint8', () => decoder.decode(bigUint8))
-bench('string_decoder smallUint8', () => {
+bench('smallUint8', () => {
   stringDecoder.write(smallUint8)
   stringDecoder.end()
 })
-bench('string_decoder bigUint8', () => {
+bench('bigUint8', () => {
   stringDecoder.write(bigUint8)
   stringDecoder.end()
 })
