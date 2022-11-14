@@ -9,7 +9,12 @@ function fixture() {
   return { smallUint8, bigUint8 }
 }
 
+const smallUint8Buf = Buffer.from(smallUint8Buf)
+const bigUint8Buf = Buffer.from(bigUint8)
+
 bench('smallUint8', () => decoder.decode(smallUint8))
 bench('bigUint8', () => decoder.decode(bigUint8))
+bench('Buffer.smallUint8', () => smallUint8Buf.toString())
+bench('Buffer.bigUint8', () => bigUint8Buf.toString())
 
 await run()
