@@ -5,7 +5,8 @@
   "scripts": {
     "text-decoder": "~/Developer/node/out/Release/node ./text-decoder/index.mjs && bun run ./text-decoder/index.mjs && deno run -A ./text-decoder/deno.js",
     "text-encoder": "~/Developer/node/out/Release/node ./text-encoder/index.mjs && bun run ./text-encoder/index.mjs && deno run -A ./text-encoder/deno.js",
-    "string-decoder": "~/Developer/node/out/Release/node ./string-decoder/index.mjs && bun run ./string-decoder/index.mjs && deno run -A ./string-decoder/deno.js"
+    "string-decoder": "~/Developer/node/out/Release/node ./string-decoder/index.mjs && bun run ./string-decoder/index.mjs && deno run -A ./string-decoder/deno.js",
+    "url": "~/Developer/node/out/Release/node ./url/index.mjs && bun run ./url/index.mjs && deno run -A ./url/deno.js"
   },
   "keywords": [],
   "author": "",
