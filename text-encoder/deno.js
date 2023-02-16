@@ -6,6 +6,9 @@ let b = Buffer.alloc(2048);
 let uf8Write = Buffer.prototype.utf8Write;
 let te = new TextEncoder();
 
+bench('noop', () => {});
+bench('noop', () => {});
+
 bench('buffer.write', () => b.write('hello world', 10))
 bench('buffer.utf8Write', () => b.utf8Write('hello world', 10, 0xffffff))
 bench('utf8Write.call', () => uf8Write.call(u, 'hello world', 10, 0xffffff))
