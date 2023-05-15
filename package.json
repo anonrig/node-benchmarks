@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "text-decoder": "~/Developer/node/out/Release/node ./text-decoder/index.mjs && bun run ./text-decoder/index.mjs && deno run -A ./text-decoder/deno.js",
-    "text-encoder": "~/Developer/node/out/Release/node ./text-encoder/index.mjs && bun run ./text-encoder/index.mjs && deno run -A ./text-encoder/deno.js",
-    "string-decoder": "~/Developer/node/out/Release/node ./string-decoder/index.mjs && bun run ./string-decoder/index.mjs && deno run -A ./string-decoder/deno.js",
-    "url": "~/Developer/node/out/Release/node ./url/index.mjs && bun run ./url/index.mjs && deno run -A ./url/deno.js",
-    "fetch": "~/Developer/node/out/Release/node ./fetch/index.mjs && bun run ./fetch/index.mjs && deno run -A ./fetch/deno.js",
-    "buffer": "~/Developer/node/out/Release/node ./buffer/index.mjs && bun run ./buffer/index.mjs && deno run -A ./buffer/deno.js"
+    "text-decoder": "node ./text-decoder/index.mjs && bun run ./text-decoder/index.mjs && deno run -A ./text-decoder/deno.js",
+    "text-encoder": "node ./text-encoder/index.mjs && bun run ./text-encoder/index.mjs && deno run -A ./text-encoder/deno.js",
+    "string-decoder": "node ./string-decoder/index.mjs && bun run ./string-decoder/index.mjs && deno run -A ./string-decoder/deno.js",
+    "url": "node ./url/index.mjs && bun run ./url/index.mjs && deno run -A ./url/deno.js",
+    "fetch": "node ./fetch/index.mjs && bun run ./fetch/index.mjs && deno run -A ./fetch/deno.js",
+    "buffer": "node ./buffer/index.mjs && bun run ./buffer/index.mjs && deno run -A ./buffer/deno.js",
+    "webstreams": "node ./webstreams/index.mjs && bun run ./webstreams/index.mjs && deno run -A ./webstreams/deno.js"
   },
   "keywords": [],
   "author": "",
